@@ -1,0 +1,466 @@
+
+/* GENERAL PAGE STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 1. STICKY POSITIONING - NAVIGATION BAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background-color: #b30000;
+    padding: 15px 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: #b30000;
+}
+
+
+/* 2. RELATIVE POSITIONING - HERO SECTION */
+
+.hero {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 430px;
+    padding: 70px 25px;
+
+    background: linear-gradient(135deg, #800000, #e60000);
+    color: white;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.hero-label {
+    display: inline-block;
+    background-color: white;
+    color: #b30000;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 22px 0;
+    color: white;
+}
+
+.welcome {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.slogan {
+    font-size: 21px;
+    font-style: italic;
+    color: #ffe6e6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: white;
+    color: #b30000;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.primary-btn:hover {
+    background-color: #ffe6e6;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: #b30000;
+}
+
+
+/* HERO DECORATION */
+
+.hero-decoration {
+    position: absolute;
+    right: 7%;
+    top: 20px;
+    font-size: 160px;
+    opacity: 0.12;
+}
+
+
+/* QUICK LINKS SECTION */
+
+.quick-links {
+    position: static;
+
+    text-align: center;
+    background-color: white;
+    margin: 35px auto;
+    padding: 35px 20px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #b30000;
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.quick-links p,
+.section-description {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.quick-link-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.quick-link-buttons a {
+    display: inline-block;
+    color: white;
+    background-color: #b30000;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quick-link-buttons a:hover {
+    background-color: #800000;
+}
+
+
+/* 3. RELATIVE + ABSOLUTE POSITIONING
+   BLOOD GROUP CARDS */
+
+.blood-section {
+    position: static;
+
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.blood-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.blood-card {
+    position: relative;
+
+    width: 200px;
+    padding: 35px 20px 25px;
+
+    background-color: white;
+    border: 2px solid #b30000;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.blood-card:hover {
+    transform: translateY(-8px);
+}
+
+.blood-card h3 {
+    color: #b30000;
+    font-size: 42px;
+    margin: 15px 0 5px;
+}
+
+.blood-card p {
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* ABSOLUTE POSITIONING - BADGE */
+
+.blood-badge {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+
+    background-color: #b30000;
+    color: white;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* 4. STATIC POSITIONING - REQUIREMENTS SECTION */
+
+.requirements-section {
+    position: static;
+
+    text-align: center;
+    background-color: white;
+    margin: 35px auto;
+    padding: 40px 20px;
+    width: 92%;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid #b30000;
+}
+
+th {
+    background-color: #b30000;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    border: 1px solid white;
+}
+
+td {
+    font-size: 15px;
+    padding: 15px;
+    border: 1px solid #b30000;
+    text-align: center;
+    line-height: 1.6;
+}
+
+tr:hover {
+    background-color: #ffe6e6;
+}
+
+
+/* FOOTER */
+
+.footer {
+    position: static;
+
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+}
+
+.footer h2 {
+    color: white;
+}
+
+.footer p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* 5. FIXED POSITIONING - EMERGENCY BUTTON */
+
+.emergency-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1100;
+
+    background-color: #b30000;
+    color: white;
+
+    padding: 15px 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.emergency-button:hover {
+    background-color: #800000;
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .hero {
+        min-height: 380px;
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-decoration {
+        right: 0;
+        font-size: 100px;
+    }
+
+    .welcome {
+        font-size: 19px;
+    }
+
+    .slogan {
+        font-size: 17px;
+    }
+
+    .blood-card {
+        width: 42%;
+        min-width: 140px;
+    }
+
+    .emergency-button {
+        right: 12px;
+        bottom: 12px;
+        font-size: 12px;
+        padding: 12px 15px;
+    }
+
+    th,
+    td {
+        min-width: 130px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .blood-card {
+        width: 80%;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .quick-links,
+    .requirements-section {
+        width: 95%;
+    }
+}
